@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master
+#      strict: true
+      data-sources:
+        master:
+          url: jdbc:mysql://localhost:3306/master
+          username: root
+          password: 123456
+        slave1:
+          url: jdbc:mysql://localhost:3306/slave1
+          username: root
+          password: 123456
+        slave2:
+          url: jdbc:mysql://localhost:3306/slave2
+          username: root
+          password: 123456
+  application:
+    name: dynamic-ds-test
+
+server:
+  port: 8888
